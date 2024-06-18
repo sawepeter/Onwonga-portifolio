@@ -14,7 +14,13 @@ const Photo = () => {
           transition: { delay: 2, duration: 0.4, ease: "easeIn" },
         }}
         >
-        <div className="w-[298x] h-[298x] xl:w-[498x] xl:h-[498x]
+        <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: 1,
+          transition: { delay: 2.4, duration: 0.4, ease: "ease" },
+        }}
+        className="w-[298x] h-[298x] xl:w-[498x] xl:h-[498x]
         mix-blend-lighten">
           <Image
             src="/assets/photo.png"
@@ -24,7 +30,7 @@ const Photo = () => {
             alt=""
             className="object-contain"
             />
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );
